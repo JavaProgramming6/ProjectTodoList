@@ -37,13 +37,26 @@ STL은 파일락과 소켓 통신을 이용하여 프로젝트 일정 관리를 
 
 ### 필요 사항
 - Java (v21 이상)
-- Maven
-### 설치 방법
+- Maven (v3.9.10)
+### 설치 방법(powerShell 기준)
 
 1. **저장소 클론**
    ```bash
-   git clone https://github.com/FitTwinProjectTeam/FitTwin.git
-   cd FitTwin
+   git clone https://github.com/JavaProgramming6/ProjectTodoList.git
+   cd ProjectTodoList\SharedTodoList
+   ```
+
+2. **컴파일**
+   ```bash
+   mvn clean compile
+   ```
+3. **서버 실행**
+   ```bash
+   mvn exec:java "-Dexec.mainClass=com.java6.todolist.ServerMain"
+   ```
+4. **클라이언트 실행**
+   ```bash
+   mvn exec:java "-Dexec.mainClass=com.java6.todolist.ClientMain"
    ```
 
 ## 📁 프로젝트 구조
