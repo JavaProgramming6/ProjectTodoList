@@ -110,14 +110,14 @@ com.java6/
 [
    {
       "id": "id1",
-      "projects: {
+      "projects": {
          "hashing project1": "project1",
          "hashing project2": "project2"
       }
    },
    {
       "id": "id2",
-      "projects: {
+      "projects": {
          "hashing project1": "project1",
          "hashing project3": "project3"
       }
