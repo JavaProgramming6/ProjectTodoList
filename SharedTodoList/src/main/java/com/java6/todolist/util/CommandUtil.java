@@ -120,7 +120,7 @@ public class CommandUtil {
                 }
 
                 while (true) {
-                    System.out.print("주어질 권한을 입력해주세요: ");
+                    System.out.print("주어질 권한을 입력해주세요(owner|editor|viewer): ");
                     permission = userInput.readLine();
                     if (!permission.isBlank()) break;
                     System.out.println("입력이 없습니다");
@@ -255,7 +255,7 @@ public class CommandUtil {
                 String editId = userInput.readLine();
 
                 while (true) {
-                    System.out.print("어떤 권한으로 변경할지 입력해주세요: ");
+                    System.out.print("어떤 권한으로 변경할지 입력해주세요(owner|editor|viewer): ");
                     editPermission = userInput.readLine();
                     if (!editPermission.isBlank()) break;
                     System.out.println("입력이 없습니다");
