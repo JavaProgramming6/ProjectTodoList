@@ -38,6 +38,7 @@ STL은 파일락과 소켓 통신을 이용하여 프로젝트 일정 관리를 
 ### 필요 사항
 - Java (v21 이상)
 - Maven (v3.9.10)
+  
 ### 설치 방법(powerShell 기준)
 
 1. **저장소 클론**
@@ -86,43 +87,89 @@ com.java6/
 
 ```
 
-## 📊 데이터 스키마
+## 📊 json 형식
 
-### Product Schema
-```javascript
-{
-  title: String,
-  image: String,
-  price: Number,
-  description: String,
-  category: Enum['상의', '하의', '아우터', '신발', '액세서리', '셋업', '기타'],
-  stock: Number,
-  isAvailable: Boolean
-}
+### user.json: 유저 아이디, 비밀번호, 이름
+```json
+[
+   {
+      "id": "id1",
+      "password": "hashing password1",
+      "name": "name1"
+   },
+   {
+      "id": "id2",
+      "password": "hashing password2",
+      "name": "name2"
+   }
+]
 ```
 
-### Avatar Schema
-```javascript
-{
-  name: String,
-  gender: Enum['남성', '여성'],
-  height: Number,
-  weight: Number,
-  bodyShapeData: Object,
-  createdAt: Date
-}
+### user_projects.json: 유저 프로젝트 리스트
+```json
+[
+   {
+      "id": "id1",
+      "projects: {
+         "hashing project1": "project1",
+         "hashing project2": "project2"
+      }
+   },
+   {
+      "id": "id2",
+      "projects: {
+         "hashing project1": "project1",
+         "hashing project3": "project3"
+      }
+   },
+   
+]
 ```
 
-### FittingResult Schema
-```javascript
-{
- avatarId: ObjectId (ref: 'Avatar'),
- productId: ObjectId (ref: 'Product'),
- fitScore: Number,      // AI 피팅 점수
- fitComment: String,    // 분석 코멘트
- imageURL: String,      // 피팅 시뮬레이션 이미지
- createdAt: Date
-}
+### members.json: 프로젝트 내부 팀원 아이디, 역할, 권한
+```json
+[
+   {
+      "id": "id1",
+      "role": "role1",
+      "permission": "permission1"
+   },
+   {
+      "id": "id2",
+      "role": "role2",
+      "permission": "permission2"
+   },
+]
+```
+
+### project.json: 해당 프로젝트 명, 마감일
+```json
+[
+   "title": "project Name",
+   "deadline": "yyyy-MM-dd HH:mm"
+]
+```
+
+### schedule.json: 프로젝트 내부 스케줄(스케줄명, 시작일, 마감일, 할당 팀원)
+```json
+[
+   {
+      "title": "title1",
+      "start": "yyyy-MM-dd HH:mm",
+      "end": "yyyy-MM-dd HH:mm",
+      "assigned": [
+         "id1", "id2"
+      ]
+   },
+   {
+      "title": "title2",
+      "start": "yyyy-MM-dd HH:mm",
+      "end": "yyyy-MM-dd HH:mm",
+      "assigned": [
+         "id1", "id2", "id3"
+      ]
+   },
+]
 ```
 
 ## 📽️ 시연 영상(2025.06.09. 기준) - 추가 예정
@@ -132,23 +179,30 @@ com.java6/
 
 ## 👥 팀원
 
-- **박규민** - 역할명
-  - 
+- **박규민** - 팀장
+  - 프로젝트 관리 기능 구현
+  - 발표 자료 제작 및 발표
   
-- **김문기** - 역할명
-  - 
+- **김문기** - 핵심 개발
+  - 프로젝트 전체 흐름 구상 및 구현 방법 제안
+  - 소켓 통신 구현
+  - 파일 작업 함수 구현
     
-- **강현서** – 역할명
-  - 
+- **강현서** – 화면 출력 디자인 및 발표
+  - 화면 입출력 디자인 및 구조 정비
+  - 발표 자료 제작
  
-- **박재민** – 역할명
-  - 
+- **박재민** – 보조 개발
+  - 일정 관리 기능 구현
+  - 클라이언트-서버 코드 연결
+  - 테스트 및 빌드 관리
   
 
 ## 🔮 향후 계획
 
 - [ ] 공란
-- [ ] 
+
+
 ## 📄 라이선스
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
