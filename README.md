@@ -1,8 +1,8 @@
-# 🛍️ STL(Project Shared TodoList) - 프로젝트 공유 투두리스트
+# STL(Project Shared TodoList) - 프로젝트 공유 투두리스트
 
 > CLI기반 프로젝트 관리 공유 투두리스트
 
-[![Node.js](https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white)](https://www.java.com/ko/)
+[![JAVA](https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white)](https://www.java.com/ko/)
 
 
 
