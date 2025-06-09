@@ -29,6 +29,10 @@ STL은 파일락과 소켓 통신을 이용하여 프로젝트 일정 관리를 
 - **소켓 통신**: ServerSocket, Socket을 이용한 클라이언트-서버 구조
 - **동시성 제어**: FileLock을 사용하여 파일 동시 접근 방지
 
+### Core
+- **Apache Maven**: 프로젝트 의존성 관리 및 빌드 자동화
+- **CLI 기반 인터페이스**: expo-router (파일 기반 라우팅)  
+
 ### DevOps & Collaboration
 - **Version Control**: Git & GitHub
 - **Project Repository**: https://github.com/JavaProgramming6/ProjectTodoList
