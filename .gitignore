@@ -23,5 +23,8 @@
 hs_err_pid*
 replay_pid*
 
-# Data files
+# Data Files
 data/
+
+# Build Files
+target/
