@@ -354,7 +354,7 @@ public class MenuManager {
 						resultData = JsonUtil.parseToDto(request, ResultData.class);
 						if (resultData.result) {
 							System.out.println("프로젝트명이 성공적으로 수정되었습니다. (NEW TITLE: " + resultData.message + ")");
-							return;
+							client.setProject(resultData.message.toString());
 						} else {
 							ErrorUtil.handleError(resultData.message.toString());
 						}
@@ -367,7 +367,7 @@ public class MenuManager {
 						resultData = JsonUtil.parseToDto(request, ResultData.class);
 						if (resultData.result) {
 							System.out.println("마감기한이 성공적으로 수정되었습니다. (NEW DEADLINE: " + resultData.message + ")");
-							return;
+							
 						} else {
 							ErrorUtil.handleError(resultData.message.toString());
 						}
