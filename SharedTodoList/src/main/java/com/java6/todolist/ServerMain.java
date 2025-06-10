@@ -18,6 +18,7 @@ public class ServerMain {
 
     public static void main(String[] args) {
         System.out.println("서버 시작. 포트 " + PORT + "에서 대기 중...");
+        JsonUtil.logWrite("INFO", "main", "system" , "서버 실행");
         
         JsonUtil.createFile(FilePathsUtil.USERS_JSON_PATH); //users 폴더 및 users.json 생성(없으면 생성안됨)
         JsonUtil.createDirectory(FilePathsUtil.PROJECT_PATH); //projects 폴더 생성(없으면 생성안됨)
@@ -60,7 +61,9 @@ public class ServerMain {
             }
         } catch (IOException e) {
             System.err.println("서버 에러: " + e.getMessage());
+            JsonUtil.logWrite("ERROR", "main", "system", "서버 에러 : " + e.getMessage());
         } finally {
+        	JsonUtil.logWrite("INFO", "main", "system", "서버 종료");
             threadPool.shutdown();
         }
     }

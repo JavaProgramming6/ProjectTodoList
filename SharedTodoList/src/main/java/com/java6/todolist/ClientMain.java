@@ -9,7 +9,7 @@ public class ClientMain {
 	
 	
     public static void main(String[] args) {
-        String serverIP = "localhost"; // 서버 IP
+        String serverIP = "172.30.1.10"; // 서버 IP
         int port = 8800; //서버 포트
 
         try (

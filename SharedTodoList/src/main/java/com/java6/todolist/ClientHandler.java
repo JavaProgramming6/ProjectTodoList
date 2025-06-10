@@ -23,6 +23,7 @@ public class ClientHandler implements Runnable {
         public void run() {
             String clientAddress = socket.getInetAddress().toString();
             System.out.println("클라이언트 연결됨: " + clientAddress);
+            JsonUtil.logWrite("INFO", "main", clientAddress , "클라이언트 접속");
             
             try (
                 BufferedReader in = new BufferedReader( //클라->서버 인풋
@@ -45,12 +46,15 @@ public class ClientHandler implements Runnable {
 	            }
             } catch (IOException e) {
                 System.err.println("[" + clientAddress + "] 연결 중 오류: " + e.getMessage());
+                JsonUtil.logWrite("ERROR", "main", clientAddress , "클라이언트 연결 오류 : " + e.getMessage());
             } finally { //통신 끝
                 try {
                     socket.close();
                     System.out.println("[" + clientAddress + "] 연결 종료");
+                    JsonUtil.logWrite("INFO", "main", clientAddress , "클라이언트 종료");
                 } catch (IOException e) {
                     System.err.println("소켓 종료 실패: " + e.getMessage());
+                    JsonUtil.logWrite("ERROR", "main", clientAddress , "클라이언트 종료 오류 : " + e.getMessage());
                 }
             }
         }
