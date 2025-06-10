@@ -178,7 +178,7 @@ com.java6/
 
 ## 📽️ 시연 영상(2025.06.09. 기준) - 추가 예정
 
-[![시연 영상](https://img.youtube.com/vi/kq1Hx8Iqd54/0.jpg)](https://youtube.com/shorts/kq1Hx8Iqd54)
+[![시연 영상](https://youtu.be/WPmSpjV2mQg)](https://youtu.be/WPmSpjV2mQg)
 
 
 ## 👥 팀원
