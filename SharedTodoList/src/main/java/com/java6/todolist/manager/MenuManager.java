@@ -614,7 +614,7 @@ public class MenuManager {
 			System.out.println("1. 스케줄명 수정");
 			System.out.println("2. 스케줄 시작일 수정");
 			System.out.println("3. 스케줄 마감일 수정");
-			System.out.println("4. 스케줄 할당 멤버 조회/수정");
+			System.out.println("4. 스케줄 할당 멤버 수정");
 			System.out.println("5. 스케줄 삭제");
 			System.out.println("0. 돌아가기");
 			System.out.println("========================");
